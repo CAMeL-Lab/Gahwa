@@ -62,8 +62,6 @@ To our knowledge, no independent Emirati lexical gold standard is available. We 
 
 ### Coverage
 
-[Download the detailed coverage results and counts](../../results/v1.0/coverage.tsv).
-
 GLF uses `calima-glf-01`, EGY uses `calima-egy-r13` (only analyses marked `[CALIMA]`), and MSA uses `camel-morph-msa-v1.2.2`. ANY is their union.
 
 A type is in-vocabulary (INV) if any analyzer returns an analysis, and out-of-vocabulary (OOV) otherwise. Because the CAMeL Tools GLF analyzer does not provide English glosses, we evaluate Gahwa at the Lemma-POS (LP) level. POS matching is largely a case-insensitive identity mapping between the two tagsets.
@@ -152,7 +150,7 @@ If you use Gahwa, please cite:
 
 ## License
 
-Gahwa is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). See [LICENSE](../../LICENSE) for the full license text.
+See [LICENSE](../../LICENSE) for the full license text.
 
 ## Contact
 
