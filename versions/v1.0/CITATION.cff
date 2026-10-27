@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+type: dataset
+message: "Cite the Gahwa paper and identify the specific dataset version used."
+title: "Gahwa Emirati Arabic lexicon"
+version: "1.0"
+authors:
+  - family-names: Alzaabi
+    given-names: Saeed
+    email: saeed.alzaabi@nyu.edu
+  - family-names: Khalifa
+    given-names: Salam
+    email: salam.khalifa@nyu.edu
+  - family-names: Saeed
+    given-names: Mostafa
+    email: mostafa.saeed@nyu.edu
+  - family-names: Dibas
+    given-names: Shahd
+    email: shahd.dibas@mbzuai.ac.ae
+  - family-names: Aldarmaki
+    given-names: Hanan
+    email: hanan.aldarmaki@mbzuai.ac.ae
+  - family-names: Habash
+    given-names: Nizar
+    email: nizar.habash@nyu.edu
+preferred-citation:
+  type: conference-paper
+  title: "Gahwa: A Computational Lexicon for Emirati Arabic"
+  authors:
+    - family-names: Alzaabi
+      given-names: Saeed
+      email: saeed.alzaabi@nyu.edu
+    - family-names: Khalifa
+      given-names: Salam
+      email: salam.khalifa@nyu.edu
+    - family-names: Saeed
+      given-names: Mostafa
+      email: mostafa.saeed@nyu.edu
+    - family-names: Dibas
+      given-names: Shahd
+      email: shahd.dibas@mbzuai.ac.ae
+    - family-names: Aldarmaki
+      given-names: Hanan
+      email: hanan.aldarmaki@mbzuai.ac.ae
+    - family-names: Habash
+      given-names: Nizar
+      email: nizar.habash@nyu.edu
+  collection-title: "Proceedings of The Fourth Arabic Natural Language Processing Conference"
+  year: 2026
+  month: 10
+  start: 219
+  end: 227
+  publisher:
+    name: "Association for Computational Linguistics"
+  url: "https://aclanthology.org/2026.arabicnlp-main.16/"
