@@ -12,8 +12,8 @@ Gahwa is introduced in our [ArabicNLP 2026 paper](https://aclanthology.org/2026.
 
 ### v1.1 — Latest version
 
-- [TSV](data/v1.1/gahwa-v1.1.tsv)
-- [Excel](data/v1.1/gahwa-v1.1.xlsx)
+- [TSV](data/v1.1/Gahwa-v1.1.tsv)
+- [Excel](data/v1.1/Gahwa-v1.1.xlsx)
 
 Both files contain the same 28,661 records and 14 columns. Records are sorted alphabetically by Entry, ignoring diacritics for sorting, with Index numbered from 1. The TSV is UTF-8 encoded, with a header row and tab-separated fields.
 
@@ -23,7 +23,7 @@ Both files contain the same 28,661 records and 14 columns. Records are sorted al
 | --- | --- |
 | Source | Original source of the lexical entry. |
 | Index | Sequential record number within this release. |
-| Root | Arabic root letters separated by dots, or NTWS / N.T.W.S (non-templatic word stem). |
+| Root | Arabic root letters separated by dots, or NTWS (non-templatic word stem). |
 | Type | LEMMA, WORD, or PHRASE. |
 | Entry | Base word form represented by the record. |
 | Lemma | Lemma linked to the represented form. |
