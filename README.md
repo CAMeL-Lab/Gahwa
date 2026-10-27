@@ -165,10 +165,12 @@ See [LICENSE](LICENSE) for the full license text.
 The paper release, [Gahwa v1.0](versions/ArabicNLP2026), remains available with its downloads, statistics, and evaluation results.
 ## Changes in v1.1
 
-- Removed the additional lemma clustering that selected the most diacritically marked form using shadda and sukun priority. Overlapping glosses are merged only when Entry, Lemma, POS, and CAMeL_POS agree.
+- Preserved diacritization variants from the source records. Consolidation no longer selects a single, more diacritically informative lemma by prioritizing shadda and sukun, allowing greater diacritic variation to remain in v1.1.
+- Consolidated entry-level records within each source and across sources. Exact duplicates are removed using Entry + Lemma + POS + CAMeL_POS + normalized English gloss. Overlapping gloss lists are merged only when Entry, Lemma, POS, and CAMeL_POS agree.
+- Removed entries identified during inspection as containing obvious annotation errors inherited from the original sources.
 - Applied the reviewed CAMeL_POS conversion map to added lemma entries before consolidation.
 - Corrected Type labels for lemmas, word forms, and phrases. Standardized gloss separators and replaced spaces in multiword entries and gloss expressions with underscores.
-- Updated inventory counts and coverage results using the same evaluation datasets. The paper's repeated-letter normalization and OOV analyses are unchanged.
+- Updated inventory counts and coverage results using the same evaluation datasets. The paper’s repeated-letter normalization and OOV analyses are unchanged.
 
 ## Contact
 
