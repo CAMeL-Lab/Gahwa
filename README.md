@@ -162,8 +162,7 @@ See [LICENSE](LICENSE) for the full license text.
 
 ## ArabicNLP 2026 Release
 
-The paper release, [Gahwa v1.0](versions/ArabicNLP2026), remains available with its downloads, statistics, and evaluation results ([coverage TSV](results/v1.0/coverage.tsv)).
-
+The paper release, [Gahwa v1.0](versions/ArabicNLP2026), remains available with its downloads, statistics, and evaluation results.
 ## Changes in v1.1
 
 - Removed the additional lemma clustering that selected the most diacritically marked form using shadda and sukun priority. Overlapping glosses are merged only when Entry, Lemma, POS, and CAMeL_POS agree.
