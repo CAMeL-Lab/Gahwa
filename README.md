@@ -70,8 +70,6 @@ To our knowledge, no independent Emirati lexical gold standard is available. We 
 
 ### Coverage — v1.1
 
-The following tables report v1.1 coverage. [Detailed results and counts](results/v1.1/coverage.tsv) are also available.
-
 GLF uses `calima-glf-01`, EGY uses `calima-egy-r13` (only analyses marked `[CALIMA]`), and MSA uses `camel-morph-msa-v1.2.2`. ANY is their union.
 
 A type is in-vocabulary (INV) if any analyzer returns an analysis, and out-of-vocabulary (OOV) otherwise. Because the CAMeL Tools GLF analyzer does not provide English glosses, we evaluate Gahwa at the Lemma-POS (LP) level. POS matching is largely a case-insensitive identity mapping between the two tagsets.
@@ -108,7 +106,6 @@ We use two LP matching conditions: Exact compares lemma strings as given, wherea
 | ANY | 95.4 | 98.3 | 75.7 | 82.3 | 85.8 | 90.4 | 84.3 | 88.9 |
 | ANY + RepNorm | 95.8 | 98.4 | 75.6 | 82.3 | 85.8 | 90.4 | 84.4 | 89.0 |
 
-The repeated-letter normalization and OOV analyses below are retained from the ArabicNLP 2026 paper. The v1.1 coverage results are reported above.
 
 ### Repeated-letter Normalization
 
