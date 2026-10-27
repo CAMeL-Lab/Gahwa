@@ -162,7 +162,7 @@ See [LICENSE](LICENSE) for the full license text.
 
 ## ArabicNLP 2026 Release
 
-The paper release, [Gahwa v1.0](versions/v1.0/README.md), remains available with its downloads, statistics, and evaluation results ([coverage TSV](results/v1.0/coverage.tsv)).
+The paper release, [Gahwa v1.0](versions/ArabicNLP2026), remains available with its downloads, statistics, and evaluation results ([coverage TSV](results/v1.0/coverage.tsv)).
 
 ## Changes in v1.1
 
