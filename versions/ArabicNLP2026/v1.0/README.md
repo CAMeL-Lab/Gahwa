@@ -8,8 +8,8 @@ Gahwa is a machine-readable lexicon constructed by extracting, enriching, and st
 
 ## Download
 
-- [TSV](../../data/v1.0/gahwa-v1.0.tsv)
-- [Excel](../../data/v1.0/gahwa-v1.0.xlsx)
+- [TSV](../../../data/v1.0/gahwa-v1.0.tsv)
+- [Excel](../../../data/v1.0/gahwa-v1.0.xlsx)
 
 Both files contain the same entries and columns, sorted by Index. The TSV is UTF-8 encoded, with a header row and tab-separated fields.
 
@@ -150,7 +150,7 @@ If you use Gahwa, please cite:
 
 ## License
 
-See [LICENSE](../../LICENSE) for the full license text.
+See [LICENSE](../../../LICENSE) for the full license text.
 
 ## Contact
 
