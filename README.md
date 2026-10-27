@@ -12,16 +12,19 @@ Gahwa is introduced in our [ArabicNLP 2026 paper](https://aclanthology.org/2026.
 
 ### v1.1 — Latest version
 
-TSV and Excel downloads pending.
+- [TSV](data/v1.1/gahwa-v1.1.tsv)
+- [Excel](data/v1.1/gahwa-v1.1.xlsx)
+
+Both files contain the same 28,661 records and 14 columns. Records are sorted alphabetically by Entry, ignoring diacritics for sorting, with Index numbered from 1. The TSV is UTF-8 encoded, with a header row and tab-separated fields.
 
 ## Data Format
 
 | Column | Description |
 | --- | --- |
 | Source | Original source of the lexical entry. |
-| Index | Unique record identifier. |
-| Root | Templatic consonantal root or NTWS (non-templatic word stem). |
-| Type | Type of entry. |
+| Index | Sequential record number within this release. |
+| Root | Arabic root letters separated by dots, or NTWS / N.T.W.S (non-templatic word stem). |
+| Type | LEMMA, WORD, or PHRASE. |
 | Entry | Base word form represented by the record. |
 | Lemma | Lemma linked to the represented form. |
 | CAMeL_POS | Fine-grained part-of-speech morphological category. |
@@ -29,23 +32,27 @@ TSV and Excel downloads pending.
 | English_Gloss | English gloss of the lemma. |
 | MSA_Lemma | Modern Standard Arabic lemma equivalent. |
 | CAMeLBERT_Freq | Lemma frequency from CAMeLBERT-Mix counts. |
-| Source_ID | Identifier in the source resource. |
-| Root Verified | Root verification status. |
-| MSA Lemma Verified | MSA lemma verification status. |
+| Source_ID | Identifier in the source resource; N/A when unavailable. |
+| Root Verified | TRUE when marked verified; blank otherwise. |
+| MSA Lemma Verified | TRUE when marked verified; blank otherwise. |
+
+Spaces in multiword entries and English gloss expressions are represented by underscores. Source attribution and root alternatives are retained when records are merged.
 
 ## Statistics
 
 | Inventory | v1.1 |
 | --- | ---: |
-| Gumar Ann records |  |
-| AE Verb Lexicon records |  |
-| Gulf Wiktionary records |  |
-| Consolidated records |  |
-| Distinct lemmas (L) |  |
-| Distinct lemma–POS pairs (LP) |  |
-| Distinct lemma–POS–gloss triples (LPG) |  |
+| Entries | 28,661 |
+| Distinct lemmas (L) | 8,620 |
+| Distinct lemma–POS pairs (LP) | 9,159 |
+| Distinct lemma–POS–gloss triples (LPG) | 11,332 |
+| Records attributed to Gumar Ann | 20,511 |
+| Records attributed to AE Verb Lexicon | 7,788 |
+| Records attributed to Gulf Wiktionary | 1,247 |
 
-The distinct lexical-entry unit in Gahwa is lemma-POS-gloss (LPG). The lemma gives the lexical head, POS separates category-specific uses, and the normalized English gloss distinguishes meanings that share the same lemma and POS.
+L, LP, and LPG count distinct values of Lemma, Lemma + POS, and Lemma + POS + English_Gloss, respectively, using the released fields as stored. LPG uses the complete English_Gloss field.
+
+Source counts refer to retained records carrying each source label. Records attributed to more than one source are counted under each source, so these counts overlap.
 
 ## Evaluation
 
@@ -63,7 +70,7 @@ To our knowledge, no independent Emirati lexical gold standard is available. We 
 
 ### Coverage — v1.1
 
-Results pending.
+The following tables report v1.1 coverage. [Detailed results and counts](results/v1.1/coverage.tsv) are also available.
 
 GLF uses `calima-glf-01`, EGY uses `calima-egy-r13` (only analyses marked `[CALIMA]`), and MSA uses `camel-morph-msa-v1.2.2`. ANY is their union.
 
@@ -75,31 +82,33 @@ We use two LP matching conditions: Exact compares lemma strings as given, wherea
 
 | Analyzer | INV types | INV tokens | Gahwa types Exact | Gahwa types Dediac | Gahwa tokens Exact | Gahwa tokens Dediac | Effective Exact | Effective Dediac |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GLF |  |  |  |  |  |  |  |  |
-| EGY |  |  |  |  |  |  |  |  |
-| MSA |  |  |  |  |  |  |  |  |
-| ANY |  |  |  |  |  |  |  |  |
-| ANY + RepNorm |  |  |  |  |  |  |  |  |
+| GLF | 37.5 | 83.7 | 91.9 | 98.2 | 97.5 | 99.6 | 81.6 | 83.4 |
+| EGY | 35.9 | 79.3 | 54.2 | 75.0 | 73.6 | 86.7 | 58.4 | 68.7 |
+| MSA | 52.0 | 87.3 | 36.3 | 63.5 | 50.4 | 83.2 | 44.0 | 72.6 |
+| ANY | 63.3 | 93.3 | 70.1 | 79.4 | 92.4 | 94.9 | 86.3 | 88.6 |
+| ANY + RepNorm | 84.4 | 97.3 | 71.7 | 80.0 | 91.9 | 94.4 | 89.4 | 91.9 |
 
 #### Mixat
 
 | Analyzer | INV types | INV tokens | Gahwa types Exact | Gahwa types Dediac | Gahwa tokens Exact | Gahwa tokens Dediac | Effective Exact | Effective Dediac |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GLF |  |  |  |  |  |  |  |  |
-| EGY |  |  |  |  |  |  |  |  |
-| MSA |  |  |  |  |  |  |  |  |
-| ANY |  |  |  |  |  |  |  |  |
-| ANY + RepNorm |  |  |  |  |  |  |  |  |
+| GLF | 70.8 | 89.6 | 93.9 | 99.1 | 97.9 | 99.8 | 87.7 | 89.4 |
+| EGY | 75.8 | 91.0 | 59.5 | 81.3 | 73.6 | 88.5 | 67.0 | 80.5 |
+| MSA | 87.8 | 95.7 | 43.5 | 73.1 | 47.8 | 80.7 | 45.8 | 77.2 |
+| ANY | 95.6 | 98.8 | 79.8 | 86.5 | 92.8 | 95.3 | 91.6 | 94.1 |
+| ANY + RepNorm | 95.9 | 98.8 | 79.8 | 86.5 | 92.8 | 95.3 | 91.7 | 94.2 |
 
 #### Ramsa Corpus
 
 | Analyzer | INV types | INV tokens | Gahwa types Exact | Gahwa types Dediac | Gahwa tokens Exact | Gahwa tokens Dediac | Effective Exact | Effective Dediac |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GLF |  |  |  |  |  |  |  |  |
-| EGY |  |  |  |  |  |  |  |  |
-| MSA |  |  |  |  |  |  |  |  |
-| ANY |  |  |  |  |  |  |  |  |
-| ANY + RepNorm |  |  |  |  |  |  |  |  |
+| GLF | 66.6 | 81.7 | 95.1 | 99.4 | 97.9 | 99.8 | 80.0 | 81.6 |
+| EGY | 76.8 | 88.1 | 56.7 | 76.4 | 70.0 | 84.3 | 61.7 | 74.3 |
+| MSA | 90.7 | 96.3 | 40.3 | 70.0 | 44.3 | 79.6 | 42.7 | 76.6 |
+| ANY | 95.4 | 98.3 | 75.7 | 82.3 | 85.8 | 90.4 | 84.3 | 88.9 |
+| ANY + RepNorm | 95.8 | 98.4 | 75.6 | 82.3 | 85.8 | 90.4 | 84.4 | 89.0 |
+
+The repeated-letter normalization and OOV analyses below are retained from the ArabicNLP 2026 paper. The v1.1 coverage results are reported above.
 
 ### Repeated-letter Normalization
 
@@ -152,11 +161,19 @@ If you use Gahwa, please cite:
 
 ## License
 
-A public release under a Creative Commons 4.0 license is planned. The specific license is to be confirmed.
+Gahwa is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). See [LICENSE](LICENSE) for the full license text.
 
 ## ArabicNLP 2026 Release
 
-The paper release, [Gahwa v1.0](versions/v1.0/README.md), remains available with its downloads, statistics, and evaluation results.
+The paper release, [Gahwa v1.0](versions/v1.0/README.md), remains available with its downloads, statistics, and evaluation results ([coverage TSV](results/v1.0/coverage.tsv)).
+
+## Changes in v1.1
+
+- Removed the additional lemma clustering that selected the most diacritically marked form using shadda and sukun priority. Overlapping glosses are merged only when Entry, Lemma, POS, and CAMeL_POS agree.
+- Applied the reviewed CAMeL_POS conversion map to added lemma entries before consolidation.
+- Corrected Type labels for lemmas, word forms, and phrases. Standardized gloss separators and replaced spaces in multiword entries and gloss expressions with underscores.
+- Retained source identifiers, source attribution, and roots during consolidation. Sorted records alphabetically by Entry and renumbered Index.
+- Updated inventory counts and coverage results using the same evaluation datasets. The paper's repeated-letter normalization and OOV analyses are unchanged.
 
 ## Contact
 
