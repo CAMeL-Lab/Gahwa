@@ -2,7 +2,7 @@
 
 ## About
 
-This repository contains Gahwa v1.0, described in our [ArabicNLP 2026 paper](https://aclanthology.org/2026.arabicnlp-main.16/).
+This page documents Gahwa v1.0, the release described in [Gahwa: A Computational Lexicon for Emirati Arabic](https://aclanthology.org/2026.arabicnlp-main.16/) (ArabicNLP 2026). The statistics and evaluation results below correspond to that release. For the latest lexicon, see [Gahwa v1.1](https://github.com/CAMeL-Lab/Gahwa#download).
 
 Gahwa is a machine-readable lexicon constructed by extracting, enriching, and standardizing evidence from an annotated Emirati corpus, a Gulf Arabic verb database, and a Gulf Arabic Wiktionary, unifying their input into one lemma-POS keyed scheme.
 
