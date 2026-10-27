@@ -15,7 +15,7 @@ Gahwa is introduced in our [ArabicNLP 2026 paper](https://aclanthology.org/2026.
 - [TSV](data/v1.1/Gahwa-v1.1.tsv)
 - [Excel](data/v1.1/Gahwa-v1.1.xlsx)
 
-Both files contain the same 28,661 records and 14 columns. Records are sorted alphabetically by Entry, ignoring diacritics for sorting, with Index numbered from 1. The TSV is UTF-8 encoded, with a header row and tab-separated fields.
+Both files contain the same 28,661 records and 14 columns. The TSV is UTF-8 encoded, with a header row and tab-separated fields.
 
 ## Data Format
 
