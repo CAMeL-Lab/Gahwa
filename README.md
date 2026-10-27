@@ -172,7 +172,6 @@ The paper release, [Gahwa v1.0](versions/v1.0/README.md), remains available with
 - Removed the additional lemma clustering that selected the most diacritically marked form using shadda and sukun priority. Overlapping glosses are merged only when Entry, Lemma, POS, and CAMeL_POS agree.
 - Applied the reviewed CAMeL_POS conversion map to added lemma entries before consolidation.
 - Corrected Type labels for lemmas, word forms, and phrases. Standardized gloss separators and replaced spaces in multiword entries and gloss expressions with underscores.
-- Retained source identifiers, source attribution, and roots during consolidation. Sorted records alphabetically by Entry and renumbered Index.
 - Updated inventory counts and coverage results using the same evaluation datasets. The paper's repeated-letter normalization and OOV analyses are unchanged.
 
 ## Contact
