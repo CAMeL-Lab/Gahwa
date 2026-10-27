@@ -2,7 +2,7 @@
 
 ## About
 
-Gahwa is an open-source, machine-readable lexicon for Emirati Arabic. It combines and enriches lexical records from three existing resources: **Gumar Ann**, the annotated Emirati subset of the Gumar corpus; the **AE Verb Lexicon**; and **Gulf Wiktionary**.
+Gahwa is a publicly available, machine-readable lexicon for Emirati Arabic. It combines and enriches lexical records from three existing resources: **Gumar Ann**, the annotated Emirati subset of the Gumar corpus; the **AE Verb Lexicon**; and **Gulf Wiktionary**.
 
 Each record links an entry form to its lemma and includes core POS and CAMeL POS, root information, English glosses, an MSA lemma equivalent, CAMeLBERT-Mix lemma frequency, and source information. The lexicon retains entry-level forms and distinguishes lexical entries by lemma, POS, and English gloss.
 
